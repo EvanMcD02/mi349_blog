@@ -1,24 +1,140 @@
-header {
-    background-color: #f8f8f8;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-nav ul li {
-    display: inline;
+/* Body and basic layout styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+header nav ul li {
     margin: 0 15px;
 }
 
-nav ul li a {
+header nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: #333;
+    font-size: 1.2rem;
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
     text-decoration: underline;
+}
+
+/* Sticky header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Main content layout */
+main {
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Two-column Flexbox layout */
+.two-column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.two-column > article {
+    flex: 1 1 48%;
+}
+
+/* Three-column Flexbox layout with large middle column */
+.three-column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.three-column > article {
+    flex: 1 1 30%;
+}
+
+.three-column > .main-column {
+    flex: 2 1 60%;
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #ddd;
+    padding: 15px;
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.sidebar a:hover {
+    background-color: #ccc;
+}
+
+/* Contact form styling */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Images styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
 }
